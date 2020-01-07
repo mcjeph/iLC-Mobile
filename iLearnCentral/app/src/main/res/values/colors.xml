@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00456F</color>
+    <color name="colorAccent">#D81B60</color>
+
+    -- app theme --
+    <color name="dark_blue">#0C0E26</color>
+    <color name="light_blue">#FF3F51B5</color>
+    <color name="mint_blue">#FF17AADB</color>
+
+    -- customized materials color --
+    <color name="text_color">#0C0E26</color>
+    <color name="background">#0C0E26</color>
+    <color name="text_view_background">#F6F8F5</color>
+    <color name="text_box_background">#FFFFFF</color>
+    <color name="text_hint_color">#838686</color>
+    <color name="text_link_color">#FFFFFF</color>
+    <color name="text_button_color">#FFFFFF</color>
+    <color name="text_cursor_color">#3F51B5</color>
+</resources>
