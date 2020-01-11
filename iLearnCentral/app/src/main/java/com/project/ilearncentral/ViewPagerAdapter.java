@@ -1,7 +1,5 @@
 package com.project.ilearncentral;
 
-import com.project.ilearncentral.UserProfile;
-import com.project.ilearncentral.Home;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -24,7 +22,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return new UserProfile();
             case 1:
-                return new Home();
+                return new NewsFeed();
+            case 2:
+                return new Management();
             default:
                 return null;
         }

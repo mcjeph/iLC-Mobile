@@ -9,22 +9,23 @@
         android:roundIcon="@drawable/logo_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
         <activity
-            android:name=".ActivityPages"
-            android:label="@string/title_activity_pages">
+            android:name=".Home"
+            android:label="@string/title_activity_home" />
+        <activity android:name=".NewsFeed" />
+        <activity android:name=".ActivityPages" />
+        <activity android:name=".SignUpLearningCenter" />
+        <activity android:name=".SignUpUsers" />
+        <activity android:name=".AccountTypeSelection" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpLearningCenter" />
-        <activity android:name=".SignUpUsers" />
-        <activity android:name=".AccountTypeSelection" />
-        <activity
-            android:name=".Login"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

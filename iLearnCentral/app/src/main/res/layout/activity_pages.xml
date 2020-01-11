@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
+        android:background="@drawable/bg_toolbar"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -20,18 +21,11 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/app_bar_height"
             android:fitsSystemWindows="true"
-            android:background="@drawable/bg_linear"
-            app:contentScrim="@color/dark_blue"
+            android:background="@drawable/bg_linear_transparent"
+            app:contentScrim="@drawable/bg_toolbar"
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             app:titleEnabled="false"
             app:toolbarId="@+id/toolbar">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="0.3"
-                android:background="@android:color/black"
-                android:fitsSystemWindows="true"/>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -39,14 +33,25 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="top"
                 android:layout_marginBottom="48dp"
+                app:title=""
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:menu="@menu/menu_activity_pages" >
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/back_icon"
+                    android:gravity="top|start"/>
+
+            </androidx.appcompat.widget.Toolbar>
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/htab_tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom" />
+                android:layout_gravity="bottom"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -60,19 +65,14 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-    <androidx.cardview.widget.CardView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_imageview"
         android:layout_width="@dimen/dp_diameter"
         android:layout_height="@dimen/dp_diameter"
+        android:src="@drawable/avatar_boy"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@android:color/white"
         app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="center"
-        app:cardBackgroundColor="#20000000"
-        app:cardCornerRadius="@dimen/dp_radius" >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/avatar_boy"
-            android:background="#50000000"/>
-    </androidx.cardview.widget.CardView>
+        app:layout_anchorGravity="center"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
