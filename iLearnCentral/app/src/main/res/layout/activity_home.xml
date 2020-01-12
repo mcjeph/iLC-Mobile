@@ -20,12 +20,51 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:menu="@menu/menu_activity_pages">
 
-            <Button
-                android:id="@+id/back_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/back_icon"
-                android:gravity="top|start"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="@dimen/nav_icon_lwh"
+                    android:layout_height="@dimen/nav_icon_lwh"
+                    android:background="@drawable/back_icon"
+                    android:gravity="center|center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/user_page_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_profile_picture"
+                        android:layout_width="@dimen/nav_icon_lwh"
+                        android:layout_height="@dimen/nav_icon_lwh"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/avatar_boy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/user_name"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/nav_icon_lwh"
+                        android:gravity="center|center_vertical"
+                        android:text="USER"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.Toolbar>
 

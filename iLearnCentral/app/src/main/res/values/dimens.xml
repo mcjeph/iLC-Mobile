@@ -4,4 +4,5 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="dp_diameter">120dp</dimen>
     <dimen name="dp_radius">60dp</dimen>
+    <dimen name="nav_icon_lwh">30dp</dimen>
 </resources>
